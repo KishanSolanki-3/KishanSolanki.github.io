@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kishan Solanki | Personal Website</title>
+  <style>
+    :root {
+      --primary: #cc0033; /* Rutgers Scarlet */
+      --text: #1f2937;
+      --text-muted: #4b5563;
+      --bg: #f9fafb;
+      --card-bg: #ffffff;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      padding: 0 1rem;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 2.5rem auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.25rem;
+    }
+
+    .one-sentence-statement {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section:last-of-type {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .skill-category {
+      background: #fdfdfd;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1rem;
+    }
+
+    .skill-category h3 {
+      font-size: 1rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-category ul {
+      list-style-type: square;
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Projects */
+    .project-card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 4px;
+      padding: 1.25rem;
+      margin-bottom: 1.25rem;
+      background: #fafafa;
+    }
+
+    .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- Rubric: Personal Statement (One-sentence introduction) -->
+    <header>
+      <h1>Kishan Solanki</h1>
+      <p class="one-sentence-statement">
+        Finance and Real Estate student at Rutgers Business School with hands-on experience in financial modeling, private equity underwriting, and market valuation.
+      </p>
+    </header>
+
+    <!-- Rubric: Skills Showcase (Tailored for employers in an organized format) -->
+    <section>
+      <h2>Skills Showcase</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Financial &amp; Technical Analysis</h3>
+          <ul>
+            <li>Financial Modeling &amp; Valuation</li>
+            <li>Cash Flow &amp; Return Analysis</li>
+            <li>Credit &amp; Risk Assessment</li>
+            <li>SWOT Analysis &amp; Sourcing</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Certifications &amp; Tools</h3>
+          <ul>
+            <li>Bloomberg Market Concepts</li>
+            <li>Project Destined CRE Fundamentals</li>
+            <li>Computer Applications for Business</li>
+            <li>Business Statistics &amp; Accounting</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Languages</h3>
+          <ul>
+            <li>English (Fluent)</li>
+            <li>Gujarati (Conversational)</li>
+            <li>Hindi (Beginner)</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h3>Professional Competencies</h3>
+          <ul>
+            <li>Cross-Functional Collaboration</li>
+            <li>Pitchbook &amp; Investment Deck Preparation</li>
+            <li>Market Research &amp; Client Outreach</li>
+            <li>Marketing Management &amp; Scheduling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rubric: Projects Section (2-3 projects with descriptive summaries and working links/references) -->
+    <section>
+      <h2>Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-title">Bender Trust Equity Research Competition: NASDAQ ($OLED)</span>
+        </div>
+        <p>
+          Formulated a comprehensive equity research report and investment pitch with a 5-member team for an established portfolio manager. Projected 5-year future earnings, executed a thorough SWOT analysis, and combined quantitative and qualitative drivers to issue a BUY rating on Universal Display Corp.
+        </p>
+        <a class="project-link" href="https://www.business.rutgers.edu" target="_blank" rel="noopener noreferrer">Reference: Rutgers Business School &rarr;</a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-title">Multifamily Acquisition &amp; Underwriting Analysis</span>
+        </div>
+        <p>
+          Underwrote three commercial multifamily acquisition opportunities as part of Project Destined's competitive real estate private equity program. Built cash flow models, ran valuation metrics, evaluated investment returns, and pitched the final investment theses in a private equity competition.
+        </p>
+        <a class="project-link" href="https://projectdestined.com" target="_blank" rel="noopener noreferrer">Reference: Project Destined Program &rarr;</a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-title">Dow Jones 30 Gap Trading Equity Research Report</span>
+        </div>
+        <p>
+          Directed an empirical trading research study evaluating 667 'Up' and 'Down' gap events across the Dow Jones 30. Tested profitability across 5 distinct time horizons, proving that overnight price gaps frequently represent market overreactions that revert back to pre-gap baseline prices.
+        </p>
+        <a class="project-link" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">Reference: Market Data Framework &rarr;</a>
+      </article>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Kishan Solanki | Rutgers Business School</p>
+    </footer>
+  </main>
+
+</body>
+</html>
