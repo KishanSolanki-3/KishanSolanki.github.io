@@ -39,9 +39,25 @@
     }
 
     header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
       border-bottom: 2px solid var(--primary);
       padding-bottom: 1.5rem;
       margin-bottom: 2rem;
+    }
+
+    .headshot {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--primary);
+      flex-shrink: 0;
+    }
+
+    .header-text {
+      flex: 1;
     }
 
     h1 {
@@ -51,10 +67,17 @@
     }
 
     .one-sentence-statement {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--text-muted);
       font-weight: 500;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 580px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
     }
 
     section {
@@ -166,15 +189,18 @@
 <body>
 
   <main class="container">
-    <!-- Rubric: Personal Statement (One-sentence introduction) -->
+    <!-- Rubric: Personal Statement & Headshot -->
     <header>
-      <h1>Kishan Solanki</h1>
-      <p class="one-sentence-statement">
-        Finance and Real Estate student at Rutgers Business School with hands-on experience in financial modeling, private equity underwriting, and market valuation.
-      </p>
+      <img src="headshot.jpeg" alt="Kishan Solanki" class="headshot" />
+      <div class="header-text">
+        <h1>Kishan Solanki</h1>
+        <p class="one-sentence-statement">
+          Finance and Real Estate student at Rutgers Business School with hands-on experience in financial modeling, private equity underwriting, and market valuation.
+        </p>
+      </div>
     </header>
 
-    <!-- Rubric: Skills Showcase (Tailored for employers in an organized format) -->
+    <!-- Rubric: Skills Showcase -->
     <section>
       <h2>Skills Showcase</h2>
       <div class="skills-grid">
@@ -216,7 +242,7 @@
       </div>
     </section>
 
-    <!-- Rubric: Projects Section (2-3 projects with descriptive summaries and working links/references) -->
+    <!-- Rubric: Projects Section -->
     <section>
       <h2>Projects</h2>
 
@@ -226,7 +252,7 @@
           <span class="project-title">Bender Trust Equity Research Competition: NASDAQ ($OLED)</span>
         </div>
         <p>
-          Formulated a comprehensive equity research report and investment pitch with a 5-member team for an established portfolio manager. Projected 5-year future earnings, executed a thorough SWOT analysis, and combined quantitative and qualitative drivers to issue a BUY rating on Universal Display Corp.
+          Formulated a comprehensive equity research report and investment pitch with a 5-member team for an established portfolio manager[cite: 2]. Projected 5-year future earnings, executed a thorough SWOT analysis, and combined quantitative and qualitative drivers to issue a BUY rating on Universal Display Corp[cite: 2].
         </p>
         <a class="project-link" href="https://www.business.rutgers.edu" target="_blank" rel="noopener noreferrer">Reference: Rutgers Business School &rarr;</a>
       </article>
@@ -237,7 +263,7 @@
           <span class="project-title">Multifamily Acquisition &amp; Underwriting Analysis</span>
         </div>
         <p>
-          Underwrote three commercial multifamily acquisition opportunities as part of Project Destined's competitive real estate private equity program. Built cash flow models, ran valuation metrics, evaluated investment returns, and pitched the final investment theses in a private equity competition.
+          Underwrote three commercial multifamily acquisition opportunities as part of Project Destined's competitive real estate private equity program[cite: 2]. Built cash flow models, ran valuation metrics, evaluated investment returns, and pitched the final investment theses in a private equity competition[cite: 2].
         </p>
         <a class="project-link" href="https://projectdestined.com" target="_blank" rel="noopener noreferrer">Reference: Project Destined Program &rarr;</a>
       </article>
@@ -248,7 +274,7 @@
           <span class="project-title">Dow Jones 30 Gap Trading Equity Research Report</span>
         </div>
         <p>
-          Directed an empirical trading research study evaluating 667 'Up' and 'Down' gap events across the Dow Jones 30. Tested profitability across 5 distinct time horizons, proving that overnight price gaps frequently represent market overreactions that revert back to pre-gap baseline prices.
+          Directed an empirical trading research study evaluating 667 'Up' and 'Down' gap events across the Dow Jones 30[cite: 2]. Tested profitability across 5 distinct time horizons, proving that overnight price gaps frequently represent market overreactions that revert back to pre-gap baseline prices[cite: 2].
         </p>
         <a class="project-link" href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">Reference: Market Data Framework &rarr;</a>
       </article>
