@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kishan Solanki | Personal Website</title>
+  <title>Kishan Solanki | Professional Portfolio</title>
   <style>
     :root {
       --primary: #cc0033; /* Rutgers Scarlet */
@@ -44,7 +44,7 @@
       gap: 1.5rem;
       border-bottom: 2px solid var(--primary);
       padding-bottom: 1.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
 
     .headshot {
@@ -67,25 +67,55 @@
     }
 
     .one-sentence-statement {
-      font-size: 1.05rem;
+      font-size: 1rem;
       color: var(--text-muted);
       font-weight: 500;
-      margin-top: 0.25rem;
+      line-height: 1.5;
     }
 
-    @media (max-width: 580px) {
+    @media (max-width: 600px) {
       header {
         flex-direction: column;
         text-align: center;
       }
     }
 
-    section {
-      margin-bottom: 2.5rem;
+    /* Tab Navigation */
+    .nav-tabs {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
     }
 
-    section:last-of-type {
-      margin-bottom: 0;
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .tab-btn:hover {
+      color: var(--primary);
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    /* Tab Content Panes */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
     }
 
     h2 {
@@ -189,19 +219,25 @@
 <body>
 
   <main class="container">
-    <!-- Rubric: Personal Statement & Headshot -->
+    <!-- Header with Photo and One-Sentence Statement -->
     <header>
-      <img src="headshot.jpeg" alt="Kishan Solanki" class="headshot" />
+      <img src="headshot.jpg" alt="Kishan Solanki" class="headshot" />
       <div class="header-text">
         <h1>Kishan Solanki</h1>
         <p class="one-sentence-statement">
-          Finance and Real Estate student at Rutgers Business School with hands-on experience in financial modeling, private equity underwriting, and market valuation.
+          Finance and Real Estate student at Rutgers Business School with hands-on experience in financial modeling and underwriting, seeking opportunities across the quasi-finance and real estate sectors to drive meaningful impact through large-scale commercial developments.
         </p>
       </div>
     </header>
 
-    <!-- Rubric: Skills Showcase -->
-    <section>
+    <!-- Tab Navigation -->
+    <nav class="nav-tabs" aria-label="Sections">
+      <button class="tab-btn active" onclick="openTab(event, 'skills-tab')">Skills</button>
+      <button class="tab-btn" onclick="openTab(event, 'projects-tab')">Projects</button>
+    </nav>
+
+    <!-- Tab 1: Skills Showcase -->
+    <section id="skills-tab" class="tab-content active">
       <h2>Skills Showcase</h2>
       <div class="skills-grid">
         <div class="skill-category">
@@ -216,18 +252,18 @@
         <div class="skill-category">
           <h3>Certifications &amp; Tools</h3>
           <ul>
-            <li>Bloomberg Market Concepts</li>
-            <li>Project Destined CRE Fundamentals</li>
-            <li>Computer Applications for Business</li>
-            <li>Business Statistics &amp; Accounting</li>
+            <li>Bloomberg Market Concepts[cite: 2]</li>
+            <li>Project Destined CRE Fundamentals[cite: 2]</li>
+            <li>Computer Applications for Business[cite: 2]</li>
+            <li>Business Statistics &amp; Accounting[cite: 2]</li>
           </ul>
         </div>
         <div class="skill-category">
           <h3>Languages</h3>
           <ul>
             <li>English (Fluent)</li>
-            <li>Gujarati (Conversational)</li>
-            <li>Hindi (Beginner)</li>
+            <li>Gujarati (Conversational)[cite: 2]</li>
+            <li>Hindi (Beginner)[cite: 2]</li>
           </ul>
         </div>
         <div class="skill-category">
@@ -242,14 +278,14 @@
       </div>
     </section>
 
-    <!-- Rubric: Projects Section -->
-    <section>
+    <!-- Tab 2: Projects Section -->
+    <section id="projects-tab" class="tab-content">
       <h2>Projects</h2>
 
       <!-- Project 1 -->
       <article class="project-card">
         <div class="project-header">
-          <span class="project-title">Bender Trust Equity Research Competition: NASDAQ ($OLED)</span>
+          <span class="project-title">Bender Trust Equity Research Competition: NASDAQ ($OLED)[cite: 2]</span>
         </div>
         <p>
           Formulated a comprehensive equity research report and investment pitch with a 5-member team for an established portfolio manager[cite: 2]. Projected 5-year future earnings, executed a thorough SWOT analysis, and combined quantitative and qualitative drivers to issue a BUY rating on Universal Display Corp[cite: 2].
@@ -271,7 +307,7 @@
       <!-- Project 3 -->
       <article class="project-card">
         <div class="project-header">
-          <span class="project-title">Dow Jones 30 Gap Trading Equity Research Report</span>
+          <span class="project-title">Dow Jones 30 Gap Trading Equity Research Report[cite: 2]</span>
         </div>
         <p>
           Directed an empirical trading research study evaluating 667 'Up' and 'Down' gap events across the Dow Jones 30[cite: 2]. Tested profitability across 5 distinct time horizons, proving that overnight price gaps frequently represent market overreactions that revert back to pre-gap baseline prices[cite: 2].
@@ -285,5 +321,17 @@
     </footer>
   </main>
 
+  <script>
+    function openTab(event, tabId) {
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(tab => tab.classList.remove('active'));
+
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
 </body>
 </html>
